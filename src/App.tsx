@@ -69,7 +69,7 @@ const GoodThings = () => (
           down, <a href="https://blog.streamtoken.net/" target="_blank">here.</a>
         </p>
       }
-      href="https://github.com/streamproject"
+      href="https://blog.streamtoken.net/"
       hrefLabel="Read the blogpost"
     />
     <GoodThing

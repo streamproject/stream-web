@@ -1,5 +1,163 @@
+@import './variables.scss';
+
 .rc-App {
   background-color: #f7f7f7;
-  height: 100%;
-  width: 100%;
+  min-height: 100vh;
+  min-width: 100vw;
+  position: relative;
+
+  .background {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    content: ' ';
+    background-image: url('../static/background.svg');
+    width: 100vw;
+    background-size: cover;
+    background-position-x: center;
+    background-position-y: bottom;
+    background-repeat: no-repeat;
+    z-index: 1;
+
+    @include phone{
+      height: 1000px;
+    }
+    @include desktop {
+      height: 880px;
+    }
+  }
+
+  .container {
+    height: 100%;
+    z-index: 10;
+  }
+
+  .container, .footer .content {
+    max-width: 1280px;
+    margin: 0 15px;
+  }
+
+  .main {
+    color: white;
+    max-width: 720px;
+
+    @include phone {
+      margin-top: 50px;
+      margin-bottom: 80px;
+    }
+    @include desktop {
+      margin-top: 80px;
+      margin-bottom: 115px;
+    }
+
+    .logo-full {
+      margin-bottom: 88px;
+      width: 110px;
+      height: 120px;
+    }
+
+    .goodbye-message {
+      text-align: center;
+    }
+  }
+
+  .good-things {
+    display: flex;
+    box-sizing: border-box;
+    width: 100%;
+    background-color: white;
+    border: solid 1px #e4e4e4;
+    border-radius: 8px;
+    margin-bottom: 80px;
+
+    @include phone {
+      padding: 20px;
+      padding-bottom: 0;
+      flex-direction: column;
+    }
+    @include desktop {
+      padding: 92px 80px;
+      padding-right: 0;
+      justify-content: space-between;
+    }
+  }
+
+  .GoodThing {
+    box-sizing: border-box;
+
+    img {
+      width: 120px;
+      height: 120px;
+      @include phone {
+        margin-bottom: 20px;
+      }
+      @include desktop {
+        margin-bottom: 40px;
+      }
+    }
+
+    @include phone {
+      margin-bottom: 80px;
+    }
+    @include desktop {
+      flex: 0 1 320px;
+      margin-right: 80px;
+    }
+
+    .message {
+      min-height: 120px;
+
+      text-align: center;
+    }
+
+    .button {
+      box-sizing: border-box;
+      margin-top: 40px;
+      display: block;
+      text-transform: uppercase;
+      width: 100%;
+      text-align: center;
+      padding: 28px 42px;
+      font-weight: bold;
+      border-radius: 16px;
+
+      color: white;
+      background-color: #49c3cf;
+
+      &:hover, &:active {
+        opacity: 0.75;
+        text-decoration: none;
+      }
+
+      @include phone {
+        font-size: 12px;
+      }
+      @include desktop {
+        font-size: 16px
+      }
+    }
+  }
+
+
+  .footer {
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: auto;
+    background-color: white;
+    padding: 66px 72px 52px;
+    color: #272c69;
+
+    .content {
+      display: flex;
+      align-items: center;
+      width: 100%;
+    }
+
+    .logo {
+      width: 36px;
+      height: 54px;
+      margin-right: 52px;
+    }
+  }
 }

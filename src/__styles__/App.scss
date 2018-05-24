@@ -103,19 +103,16 @@
       margin-bottom: 80px;
     }
     @include desktop {
-      flex: 0 1 320px;
+      flex: 0 0 320px;
       margin-right: 80px;
     }
 
     .message {
-      min-height: 120px;
-
-      text-align: center;
+      min-height: 160px;
     }
 
     .button {
       box-sizing: border-box;
-      margin-top: 40px;
       display: block;
       text-transform: uppercase;
       width: 100%;

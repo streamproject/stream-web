@@ -1,4 +1,4 @@
-$width: 768px;
+$width: 1280px;
 
 @mixin phone {
   @media (max-width: #{$width}) {

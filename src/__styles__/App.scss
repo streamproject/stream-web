@@ -74,9 +74,10 @@
     margin-bottom: 80px;
 
     @include phone {
-      padding: 20px;
-      padding-bottom: 0;
+      padding: 60px;
+      padding-bottom: 20px;
       flex-direction: column;
+      align-items: center;
     }
     @include desktop {
       padding: 92px 80px;
@@ -99,7 +100,8 @@
     }
 
     @include phone {
-      margin-bottom: 80px;
+      max-width: 320px;
+      margin-bottom: 40px;
     }
     @include desktop {
       flex: 0 1 320px;
@@ -107,7 +109,9 @@
     }
 
     .message {
-      min-height: 200px;
+      @include desktop {
+        min-height: 200px;
+      }
     }
 
     .button {
